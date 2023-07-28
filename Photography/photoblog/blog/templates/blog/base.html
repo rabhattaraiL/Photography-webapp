@@ -1,0 +1,52 @@
+<!-- load static files from static directory-->
+{% load static %} 
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Links to bootstrap and font-awesome css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    </head>
+    <title> Photo Vision</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md">        
+            <div class="container-fluid navbar-container">
+                <a class="navbar-brand"> <img class="rounded-circle" src="{% static 'blog/images/logoicon.jpg' %}" alt="Image" style="width: 8%; height: 8%;"></a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog-home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog-about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog-service' %}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog-gallery' %}">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog-contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid" >
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer class="footer bg-darkred text-light py-5">
+            <div class="container text-center">
+                <p>&copy; Photo Vision Nepal. All rights reserved.</p>
+                <p>A complete solution for photography and videography</p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

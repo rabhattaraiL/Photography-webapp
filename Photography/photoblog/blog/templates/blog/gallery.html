@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="header">
+    <h1>Portfolio</h1>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="{% static 'blog/images/gallery_1.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_2.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_12.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_5.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_17.jpg' %}" style="width: 100%;">
+    </div>
+   <div class="column">
+      <img src="{% static 'blog/images/gallery_3.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_16.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_15.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_19.jpg' %}" style="width: 100%;">
+      <img src="{% static 'blog/images/gallery_14.jpg' %}" style="width: 100%;">
+    </div>
+  </div>
+{% endblock %}
